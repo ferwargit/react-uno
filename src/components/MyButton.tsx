@@ -1,6 +1,15 @@
 import "./MyButton.css";
 
 const MyButton = () => {
-  return <button className="btn">MyButton</button>;
+  const handleClick = (message: string) => {
+    console.log("Click");
+    alert(message);
+  };
+
+  return (
+    <button className="btn" onClick={() => handleClick("Click")}>
+      MyButton
+    </button>
+  );
 };
 export default MyButton;
